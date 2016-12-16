@@ -34,6 +34,13 @@
     <input type="date" id="new_task_due" name="task_due" placeholder="Task Due"></input>
     <button class="btn btn-primary">Add</button>
     </form>
+    @if(count($errors) > 0)
+    <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+@endif
   </div>
 
 
@@ -76,7 +83,7 @@
           <form action="/show/{{ $task->id }}/{{0}}" method="post">
             {{ csrf_field() }}
             {{ method_field('PUT') }}
-            <button class="btn btn-primary">Mark Complete</button>
+            <button class="btn btn-primary">Mark Complete</button> 
           </form>
         </td>
         </tr>

@@ -75,12 +75,12 @@ public function index(Request $request)
     public function store(Request $request)
     {
         //validate= date required, not blank (if submitted), date must be after current
-        /*
+
         $this->validate($request, [
            'task_description' => 'required|min:3',
-           'task_due' => ''
+           'task_due' => 'required|date'
        ]);
-       */
+
        $user = $request->user();
        $task_description = $request->input('task_description');
        $task_due = $request->input('task_due');

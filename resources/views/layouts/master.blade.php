@@ -8,7 +8,7 @@
     <meta charset='utf-8'>
 
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-
+    <link href='/css/nav.css' type='text/css' rel='stylesheet'>
     <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
     <link href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/lumen/bootstrap.min.css' rel='stylesheet'>
@@ -25,28 +25,33 @@
 <body>
 
 <nav id= 'nav'>
+  <!-- Dropdown -->
+
       <div class="container-fluid">
       <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+      <a class="navbar-brand" href="#">To Do List</a>
       </div>
       <ul class="nav navbar-nav">
         @if(Auth::check())
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href='/show'>View To Do List</a></li>
-            <!-- Dropdown -->
-            <div class="dropdown">
-              <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-                <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href='/show'>View All Tasks</a></li>
-                  <li><a href='/show/incomplete'>View Incomplete Tasks only</a></li>
-                  <li><a href='/show/complete'>View Completed Tasks only</a></li>
-                </ul>
-              </div>
+        <li class="active"><a href="/">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/show">View Tasks
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href='/show'>View All Tasks</a></li>
+              <li><a href='/show/incomplete'>View Incomplete Tasks only</a></li>
+              <li><a href='/show/complete'>View Completed Tasks only</a></li>
+            </ul>
+          </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href='/logout'><span class="glyphicon glyphicon-log-out"></span> Logout </a></li>
+            </ul>
+
           @else
             <li><a href='/'>Home</a></li>
-            <li><a href='/login'>Log in</a></li>
-            <li><a href='/register'>Register</a></li>
+            <li><a href='/login'><span class="glyphicon glyphicon-log-in"></span> Log in</a></li>
+            <li><a href='/register'><span class="glyphicon glyphicon-user"></span> Register</a></li>
         @endif
     </ul>
   </div>

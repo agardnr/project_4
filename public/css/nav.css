@@ -1,0 +1,9 @@
+.dropdown {
+  align-items: center;
+}
+
+#nav {
+  margin-bottom: 10%;
+  background-color: #f2f2f2;
+  color: red !important;
+}

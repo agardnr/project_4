@@ -11,3 +11,14 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
+
+// Controllers
+
+// User controller
+
+// Task controller
+  // Get tasks from database
+  // Display tasks
+  // Update tasks
+  // Input new tasks 
+  // Delete tasks

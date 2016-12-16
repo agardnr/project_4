@@ -4,6 +4,8 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
+use App\User;
 
 class User extends Authenticatable
 {
@@ -26,4 +28,20 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+/*
+    public function tasks() {
+      # User has many Tasks
+      # Define a one-to-many relationship.
+      return $this->hasMany('App\Task');
+  }
+  */
+
+  public function tasks()
+  {
+    # With timetsamps() will ensure the pivot table has its created_at/updated_at fields automatically maintained
+    return $this->belongsToMany('App\Task')->withTimestamps();
+  }
+
 }

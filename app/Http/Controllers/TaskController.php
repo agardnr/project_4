@@ -96,7 +96,7 @@ public function index(Request $request)
     //   $task->user_id = $request->user()->id; # <--- NEW LINE
       // $task->save();
 
-    //   return redirect('/show');
+       return redirect('/show');
 
     }
 
@@ -249,6 +249,8 @@ public function index(Request $request)
 
         $task->save();
 
+        //    return to list
+            return redirect('/show');
     }
 
 
@@ -258,6 +260,7 @@ public function index(Request $request)
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+     /*
     public function destroy($id)
     {
         # First get a task to delete
@@ -278,6 +281,28 @@ public function index(Request $request)
 
 
         }
+        */
+
+        public function destroy(Request $request)
+        {
+            # First get a task to delete
+            $task = Task::find($request->id);
+
+            # If we found the task, delete it
+            if($task) {
+
+                # Goodbye!
+                $task->delete();
+
+            //    return to list
+                return redirect('/show');
+            }
+            else {
+                return "Can't delete - Task not found.";
+                }
+
+
+            }
 
 
     }

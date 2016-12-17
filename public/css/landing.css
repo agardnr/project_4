@@ -20,3 +20,17 @@
 #landing-panel-body {
   background-color: #ddedf6;
 }
+
+/*--
+#nav {
+  margin-bottom: 10%;
+}
+--*/
+
+#add_task {
+  padding: 25%;
+}
+
+#incomplete_task {
+  padding: 25%;
+}

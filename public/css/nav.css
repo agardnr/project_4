@@ -1,9 +1,43 @@
-.dropdown {
-  align-items: center;
-}
+
 
 #nav {
-  margin-bottom: 10%;
+   margin-bottom: 4%;
   background-color: #f2f2f2;
-  color: red !important;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #f5f8fa !important;
+}
+
+.img-thumbnail, body {
+    background-color: !important #f5f8fa;
+}
+
+#new_task_description {
+  width: 100%;
+}
+
+#new_task_due{
+  width: 15%;
+}
+
+td, #task_description {
+  width: 100%;
+}
+
+td, #task_due{
+  width: 50%;
+}
+
+table {
+  border: none;
+}
+
+.completed_task {
+    color: #888;
+    text-decoration: line-through;
 }

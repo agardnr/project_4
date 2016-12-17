@@ -35,22 +35,11 @@
        <div class="panel-body">
          <!-- Body here -->
          <div>
-           <form class= "form-inline" method="post" action="/show">
-
+           <form method="post" action="/show">
              {{ csrf_field() }}
-      <!--    <div class="form-group"> -->
-           <div class="col-xs-8">
-          <input class="form-control" type="text" id="new_task_description" name="task_description" placeholder="Task Description"></input>
-          </div>
-      <!--   </div> -->
-
-    <!--     <div class="form-group"> -->
-        <!--   <div class="col-xs-2"> -->
-           <input type="date" class="form-control" id="new_task_due" name="task_due" placeholder="Task Due"></input>
-        <!--   </div> -->
-    <!--     </div> -->
-
-           <button class="btn btn-info"><i class="glyphicon glyphicon-plus"></i></button>
+           <input class="form-control .col-lg-*" type="text" id="new_task_description" name="task_description" placeholder="Task Description"></input>
+           <input type="date" id="new_task_due" name="task_due" placeholder="Task Due"></input>
+           <button class="btn btn-link">Add</button>
            </form>
            @if(count($errors) > 0)
            <ul>
@@ -70,9 +59,10 @@
   <div class="panel-heading">To Do</div>
     <div class="panel-body">
       <!-- Panel Content -->
-      <table class="table table">
+      <table class="table table-striped">
         <thead>
           <tr>
+            <th>ID</th>
             <th>Task</th>
             <th>Date Due</th>
           </tr>
@@ -90,17 +80,14 @@
             <input name='id' value='{{$task->id}}' type='hidden'>
 
             <tr>
-            <td>
-           <input class="form-control" type="text" id="task_description" name="task_description" value='{{ old('task_description', $task->task_description) }}' placeholder="Task Description"></input>
-           </td>
-            <td>
-            <input type="date" class="form-control" id="task_due" name="task_due" value="{{ old('task_due', $task->task_due) }}" placeholder="Task Due"></input>
-          </td>
+            <td class="task_list"><div>{{ $task->id}}</div></td>
+            <td><div><input type="text" name="task_description" id="task_description" value='{{ old('task_description', $task->task_description) }}'></td></div>
+            <td><div><input type="text" name="task_due" id="task_due" value="{{ old('task_due', $task->task_due) }}"></input></td></div>
 
 
 
             <!-- Edit Task -->
-            <td><button type="submit" class="btn btn-link"><span class="glyphicon glyphicon-pencil"></span> Edit</button></td>
+            <td><button type="submit" class="btn btn-link">Edit</button></td>
 
               </form>
 
@@ -128,9 +115,10 @@
        <div class="panel-heading">Completed Tasks</div>
     <div class="panel-body">
       <!-- Panel Content -->
-    <table class="table table">
+    <table class="table table-striped">
       <thead>
         <tr>
+          <th>ID</th>
           <th>Task</th>
           <th>Date Due</th>
         </tr>
@@ -147,8 +135,9 @@
     <input name='id' value='{{$task->id}}' type='hidden'>
 
     <tr>
-    <td><div class="completed_task">{{$task->task_description }}</td></div>
-    <td><div class="completed_task">{{$task->task_due }}</td></div>
+    <td class="task_list"><div>{{ $task->id}}</div></td>
+    <td><div>{{$task->task_description }}</td></div>
+    <td><div>{{$task->task_due }}</td></div>
 
 
 
@@ -163,7 +152,7 @@
       <form action="/destroy/{{ $task->id }}" method="get">
         {{ csrf_field() }}
         {{ method_field('DELETE') }}
-        <button class="btn btn-link"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+        <button class="btn btn-link">Delete</button>
       </form>
     </td>
     </tr>
@@ -186,7 +175,6 @@
 
 
 
-</div>
 </div>
 
 

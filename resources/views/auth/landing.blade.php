@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @extends('layouts.master')
 @section('head')
-<link href='/css/landing.css' type='text/css' rel='stylesheet'>
 @endsection
 
 @section('content')

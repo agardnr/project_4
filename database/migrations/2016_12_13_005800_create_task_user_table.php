@@ -25,8 +25,8 @@ class CreateTaskUserTable extends Migration
       $table->integer('user_id')->unsigned();
 
       # Make foreign keys
-      $table->foreign('task_id')->references('id')->on('tasks');
-      $table->foreign('user_id')->references('id')->on('users');
+      $table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');;
+      $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');;
   });
     }
 

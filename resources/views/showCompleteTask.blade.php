@@ -8,14 +8,6 @@
 
 
 @section('head')
-<meta name="_token" content="{!! csrf_token() !!}" />
-<!--<link href='/css/list.css' type='text/css' rel='stylesheet'>-->
-<script src="/js/list.js"></script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 @endsection
 
 
@@ -36,7 +28,7 @@
      <thead>
        <tr>
          <th>Task</th>
-         <th>Date Due</th>
+         <th>Date Completed</th>
        </tr>
      </thead>
      <tbody>
@@ -52,7 +44,7 @@
 
    <tr>
    <td><div class="completed_task">{{$task->task_description }}</td></div>
-   <td><div class="completed_task">{{$task->task_due }}</td></div>
+   <td><div class="completed_task">{{$task->completed_at }}</td></div>
 
 
 
@@ -76,27 +68,12 @@
 
    @endforeach
 
-
-
  </tbody>
 
  </table>
    </div>
  </div>
-
-
-
-
-
-
-
  </div>
  </div>
 
-
-
-@endsection
-
-
-@section('body')
 @stop

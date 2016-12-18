@@ -8,14 +8,7 @@
 
 
 @section('head')
-<meta name="_token" content="{!! csrf_token() !!}" />
-<!--<link href='/css/list.css' type='text/css' rel='stylesheet'>-->
-<script src="/js/list.js"></script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 @endsection
 
 
@@ -23,6 +16,19 @@
 <!-- Panel 2 -->
 <!-- Incomplete Tasks Table -->
 <div class="container">
+
+  <!-- Display Errors -->
+  @if(count($errors) > 0)
+  <ul>
+      @foreach ($errors->all() as $error)
+
+      <div class="text-danger" role="alert">
+    <li>{{ $error }}</li>
+  </div>
+  @endforeach
+  </ul>
+  @endif
+
 <div class="panel panel-info" id='Incomplete_task'>
   <div class="panel-heading">To Do</div>
     <div class="panel-body">
@@ -48,16 +54,16 @@
 
             <tr>
             <td>
-           <input class="form-control" type="text" id="task_description" name="task_description" value='{{ old('task_description', $task->task_description) }}' placeholder="Task Description"></input>
+           <input class="form-control" type="text" id="task_description" name="update_task_description" value='{{ old('task_description', $task->task_description) }}' placeholder="Task Description"></input>
            </td>
             <td>
-            <input type="date" class="form-control" id="task_due" name="task_due" value="{{ old('task_due', $task->task_due) }}" placeholder="Task Due"></input>
+            <input type="date" class="form-control" id="task_due" name="update_task_due" value="{{ old('task_due', $task->task_due) }}" placeholder="Task Due"></input>
           </td>
 
 
 
             <!-- Edit Task -->
-            <td><button type="submit" class="btn btn-link"><span class="glyphicon glyphicon-pencil"></span> Edit</button></td>
+            <td><button type="submit" class="btn btn-link"><span class="glyphicon glyphicon-pencil"></span> Update</button></td>
 
               </form>
 

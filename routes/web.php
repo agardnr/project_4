@@ -10,16 +10,13 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-/*
-Route::get('/', function () {
-    return view('welcome');
-});
-*/
+
 // index
 Route::get('/', 'HomeController@index')->name('home.index');
 
-// Landing page
+/* Landing page
 Route::get('/home', 'HomeController@landing')->name('home.landing');
+*/
 
 // Create new task
 Route::get('/create', 'TaskController@create')->name('task.create')->middleware('auth');
@@ -35,19 +32,12 @@ Route::get('/show/{completion}', 'TaskController@showIncomplete')->name('task.sh
 
 // Update task
 Route::put('/show/{id}', 'TaskController@update')->name('task.update');
-//Route::get('/edit', 'TaskController@update')->name('task.update');
 
 // Update task status
-//Route::put('/show/{id}/update', 'TaskController@update_status')->name('task.update_status');
-//test Undo
 Route::put('/show/{id}/{status}', 'TaskController@update_status')->name('task.update_status');
 
 // Delete task
 Route::get('/destroy/{id}', 'TaskController@destroy')->name('task.destroy');
-
-// Delete task
-Route::get('/test', 'TaskController@test')->name('task.test');
-
 
 Route::get('/debug', function() {
 
@@ -81,14 +71,6 @@ Route::get('/debug', function() {
     }
 
     echo '</pre>';
-
-    // Routes: //
-
-    // Get Tasks
-    // Show Tasks
-    // Edit Tasks
-    // Input new tasks
-    // Delete Tasks
 
 });
 

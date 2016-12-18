@@ -13,9 +13,6 @@ body {
     background-color: #f5f8fa !important;
 }
 
-.img-thumbnail, body {
-    background-color: !important #f5f8fa;
-}
 
 #new_task_description {
   width: 100%;
@@ -40,4 +37,27 @@ table {
 .completed_task {
     color: #888;
     text-decoration: line-through;
+}
+
+#landing-panel-intro{
+  min-height: 300px; max-height: 300px;
+  border-color: #ddedf6;
+  background-color: #ddedf6;
+}
+
+#landing-panel{
+  min-height: 300px; max-height: 300px;
+  border-color: #ddedf6;
+
+}
+
+#landing-panel-text {
+  text-align: center;
+  padding: 10%;
+  background-color: #ddedf6;
+
+}
+
+#landing-panel-body {
+  background-color: #ddedf6;
 }

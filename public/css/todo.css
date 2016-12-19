@@ -61,3 +61,24 @@ table {
 #landing-panel-body {
   background-color: #ddedf6;
 }
+
+.tasks {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.row.headings,h5 {
+  text-align: center;
+}
+
+#todo{
+  float:left;
+}
+
+.panel_1 {
+    margin-bottom: 20px;
+}
+
+.panel_2 {
+    margin-bottom: 20px;
+}

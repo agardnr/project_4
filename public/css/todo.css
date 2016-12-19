@@ -13,25 +13,12 @@ body {
     background-color: #f5f8fa !important;
 }
 
-
 #new_task_description {
   width: 100%;
 }
 
 #new_task_due{
   width: 15%;
-}
-
-td, #task_description {
-  width: 100%;
-}
-
-td, #task_due{
-  width: 50%;
-}
-
-table {
-  border: none;
 }
 
 .completed_task {
@@ -48,14 +35,12 @@ table {
 #landing-panel{
   min-height: 300px; max-height: 300px;
   border-color: #ddedf6;
-
 }
 
 #landing-panel-text {
   text-align: center;
   padding: 10%;
   background-color: #ddedf6;
-
 }
 
 #landing-panel-body {

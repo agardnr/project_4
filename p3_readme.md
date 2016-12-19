@@ -1,20 +1,18 @@
-**Developer's Best Friend:** Project 3
+**To Do List:** Project 4
 
-**Live URL:** [Link to Amanda's Portfolio](http://www.p3.amanda-gardner.org/)
+**Live URL:** [Link to Amanda's Portfolio](http://www.p4.amanda-gardner.org/)
 
 **Description:**
-Lorem Ipsum and Random User Generator
+To do list with capability to enter, modify, and delete tasks.
 
-**Screencast demo:** [Link to Demo](http://screencast.com/t/cTHxbjpbc)
+**Screencast demo:** [Link to Demo](http://www.screencast.com/t/6Itus3tj)
 
 **Details for TA:**
 
-I used packages to generate Lorem Ipsum and random users. For random users I used Faker, which
-is already included as a library in Laravel.
+Thanks for your helpful feedback this semester!
 
 
 **Outside Code:**
 
 * [Bootstrap Navbar](http://www.w3schools.com/bootstrap/bootstrap_navbar.asp)
-* [Package: Faker, Instructions with code:](http://www.tutorials.kode-blog.com/laravel-5-faker-tutorial)
 * [Bootstrap](http://getbootstrap.com/)

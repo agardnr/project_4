@@ -19,8 +19,9 @@ class TaskUserTableSeeder extends Seeder
 
   $tasks =[
       'Do laundry' => ['jill@harvard.edu','jamal@harvard.edu','agardner@fas.harvard.edu'],
-      'Buy groceries' => ['jamal@harvard.edu'],
-      'Make dinner' => ['agardner@fas.harvard.edu']
+      'Buy groceries' => ['jill@harvard.edu','jamal@harvard.edu','agardner@fas.harvard.edu'],
+      'Make dinner' => ['jill@harvard.edu','jamal@harvard.edu','agardner@fas.harvard.edu'],
+      'Finish P4' => ['agardner@fas.harvard.edu','jill@harvard.edu']
   ];
 
   # Now loop through the above array, creating a new pivot for each book to tag

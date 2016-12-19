@@ -3,7 +3,7 @@
 **Live URL:** [Link to Amanda's Portfolio](http://www.p4.amanda-gardner.org/)
 
 **Description:**
-To do list with capability to enter, modify, and delete tasks.
+To do list with ability to enter, modify, and delete tasks.
 
 **Screencast demo:** [Link to Demo](http://www.screencast.com/t/6Itus3tj)
 
